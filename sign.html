@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign in | Sari's Olx</title>
+    <link rel="icon" href="./title icon.png">
+    <link rel="stylesheet" href="./design.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="manifest" href="./manifest.json">
+</head>
+<body>
+    <img src="./main logo.png" alt="mainlogo" width="350">
+    <h1>Welcome!</h1>
+    <div class="main">
+        <div class="loginForm">
+            <h1> <i class="fa fa-user-circle"></i> Sign in</h1>
+            <i class="fa fa-at"></i> Email:
+            <input class="input" placeholder="e.g.  abc@gmail.com" type="email" id="email"><br>
+            <i class="fa fa-pencil-square-o"></i> Password:
+            <input class="input" placeholder="e.g.  123456" type="password" id="password" >
+            <span onclick="Login()" style=" width: 20%; text-align: center; font-size: 10pt; float: right; margin: 10px 0px;" class="collapse h1-design"><i class="fa fa-sign-in"></i> Login</span>  
+            <br>    
+            <br>      
+        <!-- <h1> <i class="fa fa-group"></i> Sign in with Facebook</h1>
+        <span onclick="fbLogin()" style="width: auto; text-align: center; background-color: rgb(42, 67, 143); font-size: 10pt; float: left; margin: 10px 0px;" class="collapse h1-design fb"><i class="fa fa-facebook-square"></i> Login with Facebook</span>                     -->
+        </div>
+    </div>
+
+
+    <div id="loginLoader" class="modal">
+        <div class="modal-content animate loading">
+            <h1>Signing In...</h1>
+            <div class="loader2"></div>
+        </div> 
+        </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+    <script src="./auth.js"></script>
+    <script src="./app.js"></script>
+      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+</html>

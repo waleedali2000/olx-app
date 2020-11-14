@@ -1,0 +1,326 @@
+body{
+    font-family: 'Quicksand';
+    text-align: center;
+    color: black;
+}
+.bg{
+  background-image: url('./main\ logo.jpg');
+  
+  background-size: 100%;
+  padding: 15%;
+}
+.main{
+  margin: 30px;
+}
+.h1-design{
+    color: white;
+    transition: 0.3s;
+    background-color: #007baf;        
+      padding: 10px;
+    border-radius: 30px;
+}
+.h1-design span{
+  float: right;
+  margin-right: 5px;
+}
+.collapse{
+    border: none;
+    cursor: pointer;
+}
+.collapse:hover{
+  background-color: white;
+  color: black;                          
+  }
+
+  .input{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border: none;
+    border-radius: 10px;
+    box-sizing: border-box;
+  background-color: #007baf;        
+    color: white;
+    font-size: 12pt;
+    transition: 0.3s;
+  }
+  .input::placeholder{
+    color: rgba(255, 255, 255, 0.685);
+  }
+.quizes{
+  height: 50%;
+  margin: 30px;;
+  width: 30%;
+  display: inline-block;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  text-align: center;
+  background-color: #0090ce;     
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin-top: 20px;
+}
+
+ul{
+  padding-left: 20px;
+}
+.loginForm{
+    margin: 40px auto;
+    padding: 0px 20px;
+    /* border: 1px solid; */
+    width: 80%;
+    border-radius: 10px;
+    color: white;
+    overflow: hidden;
+  background-color: #03a7ee;     
+    text-align: left;
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  /* padding-top: 50px; */
+}
+hr{
+  border: 1px solid white;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  color: white;
+  padding: 0px 20px;
+  background-color: #03a7ee;   
+  margin: 2% 15% 2% 15%;
+  width: auto; /* Could be more or less, depending on screen size */
+  border-radius: 15px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  overflow: hidden;
+  text-align: left;
+}
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* Add Zoom Animation */
+.animate {
+  position: relative;
+  animation-name: animatebottom;
+  animation-duration: 0.4s
+}
+@keyframes animatebottom {
+  from{ top:-100px; opacity:0 } 
+  to{ top:0; opacity:1 }
+}
+
+.loading{
+  text-align: center;padding: 10px; margin: 5% auto; width: 50%;
+}
+
+/* LOADER */
+
+.loader2 {
+  width:25px;
+  height:25px;
+  display:inline-block;
+  padding:0px;
+  border-radius:100%;
+  border:5px solid;
+  border-top-color:#016692;
+  border-bottom-color:white;
+  border-left-color: #016692;
+  border-right-color: white;
+  -webkit-animation: loader2 2s ease-in-out infinite alternate;
+  animation: loader2 2s ease-in-out infinite alternate;
+}
+@keyframes loader2 {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(720deg);}
+}
+@-webkit-keyframes loader2 {
+  from {-webkit-transform: rotate(0deg);}
+  to {-webkit-transform: rotate(720deg);}
+}
+#myInput {
+  border-radius: 10px;
+  width: 90%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: orange;
+  cursor: pointer;
+  color: white;
+}
+
+select {
+  border-radius: 5px;
+  margin: 5px 0 5px 0;
+  color: white;
+  font-size: 15px;
+  width: 100%;
+  border: none;
+  padding-top: 10px;
+  font-family: 'Quicksand';
+  padding-bottom: 10px;
+  background-color: #007baf;          
+}
+select option{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+textarea{
+  font-family: 'Quicksand'
+}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: 1px solid white;
+  outline: none;
+  background-color: #0090ce;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+.footer{
+  color: white;
+  margin-top: 40px;
+  padding: 5px;
+  height: 190px;
+  background-color: #03a7ee; 
+}
+
+@media screen and (max-width: 650px){
+  .footer{
+  margin-top: 90px;
+    font-size: 15px;
+  }
+  .loginForm h1 {
+    font-size: 20px;
+  }
+  #welcomeStudent{
+    font-size: 20pt;
+  }
+  .main{
+    margin: 5px;
+  }
+  .main h1{
+    font-size: 20px;
+  }
+  .quizes h2{
+    font-size: 20px;
+  }
+  .quizes{
+    margin: 0px;
+    margin-bottom: 20px;
+    width: 90%;
+  }
+  .modal-content{
+    margin: 5%;
+  }
+  .loading{
+    text-align: center;padding: 10px; margin: 5%; width: auto;
+  }
+  .loader4{
+    width: 65px;
+    height: 65px;
+  }
+  #myInput{
+    width: 80%;
+  }
+}
+
+
+.topnav {
+  overflow: hidden;
+  background-color: #03a7ee; 
+}
+
+.topnav a{
+  cursor: pointer;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #0090ce;
+}
+
+/* .active {
+  background-color: rgb(204, 0, 51);
+  color: white;
+} */
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+
+
+
+
+
+

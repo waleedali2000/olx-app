@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>waleed Olx</title>
+    <link rel="icon" href="./title icon.png">
+    <link rel="stylesheet" href="./design.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="manifest" href="./manifest.json">
+</head>
+<body onload="allData()">
+    <img src="./main logo.png" alt="mainlogo" width="350">
+    <div id="mainDiv" class="main">
+    <div class="topnav" id="myTopnav">
+    <!-- <a href="#home" class="active">Home</a> -->
+    <a onclick="document.getElementById('post').style.display = 'block'">Post an Ad</a>
+    <div id="post" class="modal">
+    <div class="modal-content animate ">
+    <span onclick="document.getElementById('post').style.display='none'" class="close" title="Close">&times;</span><br>
+    <br>
+    <h1 style="margin: 0px;">Post an Ad!</h1>
+    <p>Fill the following Fields.</p>
+    <hr>
+    <div class="container">
+    Choose Category:
+    <select>
+    <option value="1">Properties</option>
+    <option value="2">Cars</option>
+    <option value="3">Furniture</option>
+    <option value="4">Jobs</option>
+    <option value="5">Electronics &amp; Appliances</option>
+    <option value="6">Mobiles</option>
+    <option value="7">Bikes</option>
+    <option value="8">Books</option>
+    </select>
+    Add Title:<input class="input" type="text" placeholder="Add title" id="title">
+    Description: <textarea class="input" id="descrip" placeholder="Add Description" cols="30" rows="10"></textarea>
+    Price:<input class="input" type="number" placeholder="Price" id="price">
+    Contact #: <input class="input" type="number" placeholder="Mobile Number" id="contact">
+    Upload Pictures:<input class="input" type="file" id="file">
+    <button id = "addPost" onclick="postAd()" style="margin: 15px 0px; float: right;" class="collapse h1-design"><i class = "fa fa-check"></i> Post Now!</button>
+    </div>
+    </div>
+    </div>
+    <a onclick="yourPost()">Your Posts</a>                        
+    <a onclick="logout()">Logout</a>
+    <a href="javascript:void(0);" class="icon" onclick="navbar()">
+    <i class="fa fa-bars"></i>
+    </a>
+    </div>
+    
+    <br>
+    <div class="bg">
+    </div>
+    <!-- <h2>Popular Categories</h2>
+    <p>Browse through some of our most popular categories.</p>
+
+<table id="myTable">
+  <tr class="header">
+    <th style="width:60%;">Categories</th>
+    <th style="width:40%;">Descriptions</th>
+  </tr>
+  <tr onclick="window.location.assign('./pages/properties.html')">
+    <td><i class="fa fa-home"></i> Properties</td>
+    <td>Houses &amp; Apartments</td>
+  </tr>
+  <tr onclick="window.location.assign('./pages/cars.html')">
+    <td><i class="fa fa-car"></i> Cars</td>
+    <td>Cars &amp; Commercial Vehicles</td>
+  </tr>
+  <tr onclick="window.location.assign('./pages/furniture.html')">
+    <td><i class="fa fa-bed"></i> Furniture</td>
+    <td>Sofa and Dining Sets</td>
+  </tr>
+  <tr onclick="window.location.assign('./pages/jobs.html')">
+    <td><i class="fa fa-suitcase"></i> Jobs</td>
+    <td>Office &amp; Company Jobs</td>
+  </tr>
+  <tr onclick="window.location.assign('./pages/electronic.html')">
+    <td><i class="fa fa-television"></i> Electronics &amp; Appliances</td>
+    <td>TV's, Computers and Laptops</td>
+  </tr>
+  <tr onclick="window.location.assign('./pages/mobiles.html')">
+    <td><i class="fa fa-mobile"></i> Mobiles</td>
+    <td>Mobile Phones &amp; Tablets</td>
+  </tr>
+  <tr onclick="window.location.assign('./pages/bikes.html')">
+    <td><i class="fa fa-motorcycle"></i> Bikes</td>
+    <td>Motorcycles &amp; Scooters</td>
+  </tr>
+  <tr onclick="window.location.assign('./pages/books.html')">
+    <td><i class="fa fa-book"></i> Books</td>
+    <td>Historical &amp; Geographical Books</td>
+  </tr>
+</table> -->
+<br>
+<input type="text" id="myInput" onkeyup="table()" placeholder="Find Cars, Phones and many more.." title="Type in a name">
+<h1>All Ad's</h1>
+<h1 id="notFound" style="display: none;">Oops! Not Found!</h1>
+    </div>
+
+    <div id="postModal" class="modal">
+        <div id="myPosts" class="modal-content animate loading">
+    <span onclick="document.getElementById('postModal').style.display='none'" class="close" title="Close">&times;</span><br>
+            <h1>Your Posts</h1>
+            <hr>
+        </div> 
+        </div>
+
+    <div id="loginLoader" class="modal">
+        <div class="modal-content animate loading">
+            <h1>Signing In...</h1>
+            <div class="loader4"></div>
+        </div> 
+        </div>
+
+        <div id="postLoader" class="modal">
+            <div class="modal-content animate loading">
+                <h1>Posting...</h1>
+                <div class="loader2"></div>
+            </div> 
+            </div>
+
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+    <script src="./auth.js"></script>
+    <script src="./app.js"></script>
+      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+</html>
